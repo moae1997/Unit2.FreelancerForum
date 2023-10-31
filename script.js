@@ -6,12 +6,16 @@ const jobs = ["Accountant", "Actor", "Architect", "Artist", "Astronomer", "Autho
 const prices = [10, 25, 5, 90, 15, 45, 8, 120, 3, 65, 8, 35, 13, 50, 2, 80, 6, 100, 2, 60, 5, 70, 10, 40, 15, 30, 10, 55, 20, 75, 13, 45, 20, 30, 17, 80, 20, 100, 9, 50, 7, 60, 5, 70, 17, 110, 5, 90, 10, 40, 8, 120, 15, 60, 12, 70, 25, 75, 13, 50, 10, 80, 15, 55, 25, 110, 18, 65, 22, 90, 20, 85, 17, 60, 13, 45, 17, 50, 22, 80, 5, 100, 10, 35, 7, 70, 4, 55, 9, 30, 7, 45, 20, 75, 23, 95, 28, 65, 26, 120, 16, 75, 32, 105, 14, 50, 29, 90, 22, 65, 10, 40, 32, 115];
 const freelancers = [
     {
-
     name: "Dr. Slice", 
     job: "gardener",
     price: 25,
+    },
+    {
+    name: "Sam", 
+    job: "Teacher",
+    price: 800,
+    }    
 
-    }  
 ];
 
 const average = () => {
@@ -34,6 +38,7 @@ const render = ()=> {
     freelancerList.replaceChildren(...freelancerLoop);
 }
 
+render();
 
 function addlancer() {
     const name = names[Math.floor(Math.random() * names.length)];
@@ -47,7 +52,7 @@ function addlancer() {
 
   }
 
-  const addShapeIntervalId = setInterval(addlancer, 5000);
+  const addShapeIntervalId = setInterval(addlancer, 2000);
 
   setTimeout(() => {
     clearInterval(addShapeIntervalId);
